@@ -141,7 +141,7 @@ INFO : Hash version: 2465e648
   $ nubeio-vpnc disconnect # pass "--disable" to not start VPN service when startup computer
   ```
 
-2. For upgrade to new version, use:
+2. For upgrade to new version, download latest version as [instruction](https://github.com/NubeIO/vpnc/blob/main/README.md#download-and-setup-vpn-client), then use:
 
   ```bash
   $ nubeio-vpnc upgrade
