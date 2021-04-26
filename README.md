@@ -40,7 +40,7 @@ export VPNCVER=v0.9.1 && export VPNARCH=armv7 \
    && ghrd -a ".*$VPNARCH.*" -x -r $VPNCVER -o /tmp nubeio/vpnc \
    && sudo mkdir -p /app \
    && sudo unzip -o -d /app /tmp/nubeio-vpnc*.zip \
-   && ln -sf /app/nubeio-vpnc /usr/local/bin/nubeio-vpnc \
+   && sudo ln -sf /app/nubeio-vpnc /usr/local/bin/nubeio-vpnc \
    && unset VPNCVER && unset VPNARCH
 ```
 
