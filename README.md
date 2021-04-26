@@ -152,21 +152,22 @@ INFO : Hash version: 2465e648
 
   ```bash
   # pass "-f" to remove completely vpnclient installation and data folder
-  # it still keep "dnsmasq" to resolve DNS for public domain. if want to restore computer network to origin state, pass "--no-keep-dnsmasq"
+  # it still keep "dnsmasq" to resolve DNS for public domain. 
+  # if want to restore computer network to origin state, pass "--no-keep-dnsmasq"
   $ nubeio-vpnc uninstall
   ```
 
 #### IoT device
 
 - Must use `Client Certificate Authentication`
-- Need `VPN device user`, `VPN device certificated` file, `VPN device private key` file
+- Need `VPN user`, `VPN user certificated` file, `VPN user private key` file
 - 2 steps for quick install and setup:
 
   ```bash
   # Install VPN client and setup Linux service
   $ sudo nubeio-vpnc install
   # Add and connect to VPN account
-  $ sudo nubeio-vpnc add -sh <vpn_server> -su <hub_name> -cd -ct cert -cu <vpn_device_user> -cck <vpn_device_certificated> -cpk <vpn_device_private_key>
+  $ sudo nubeio-vpnc add -sh <vpn_server> -su <hub_name> -cd -ct cert -cu <vpn_user> -cck <user_cert> -cpk <user_privkey>
   ```
 
 - After that, please verify by commands:
@@ -175,7 +176,7 @@ INFO : Hash version: 2465e648
   $ sudo nubeio-vpnc status
 
   INFO : VPN Application   : Installed - /app/vpnclient
-  INFO : VPN Service       : qweio-vpn - active(running) - PID[4511]
+  INFO : VPN Service       : nubeio-vpn - active(running) - PID[4511]
   INFO : VPN Account       : cba - Connection Completed (Session Established)
   INFO : VPN IP address    : [{'addr': '10.0.0.6', 'netmask': '255.0.0.0', 'broadcast': '10.255.255.255'}]
   ```
