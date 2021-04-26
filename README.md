@@ -127,34 +127,34 @@ INFO : Hash version: 2465e648
 
 1. Normal workflow
 
-```bash
-# Setup VPN client service
-$ nubeio-vpnc install # pass "--auto-dnsmasq" to try installing `dnsmasq` internally
+  ```bash
+  # Setup VPN client service
+  $ nubeio-vpnc install # pass "--auto-dnsmasq" to try installing `dnsmasq` internally
 
-# Add VPN account then open VPN session and start VPN service
-$ nubeio-vpnc add <option for VPN connection> # use "-h" for more detail
+  # Add VPN account then open VPN session and start VPN service
+  $ nubeio-vpnc add <option for VPN connection> # use "-h" for more detail
 
-# Show VPN status
-$ nubeio-vpnc status
+  # Show VPN status
+  $ nubeio-vpnc status
 
-# Disconnect VPN connection and stop VPN service
-$ nubeio-vpnc disconnect # pass "--disable" to not start VPN service when startup computer
-```
+  # Disconnect VPN connection and stop VPN service
+  $ nubeio-vpnc disconnect # pass "--disable" to not start VPN service when startup computer
+  ```
 
 2. For upgrade to new version, use:
 
-```bash
-$ nubeio-vpnc upgrade
-```
-**Note** It is hot reload regardless current state is in VPN session or not. Don't stop a script manually by `<Ctrl + C>` if don't want to break a network connection.
+  ```bash
+  $ nubeio-vpnc upgrade
+  ```
+  **Note** It is hot reload regardless current state is in VPN session or not. Don't stop a script manually by `<Ctrl + C>` if don't want to break a network connection.
 
 3. Uninstall VPN service, use:
 
-```bash
-# pass "-f" to remove completely vpnclient installation and data folder
-# it still keep "dnsmasq" to resolve DNS for public domain. if want to restore computer network to origin state, pass "--no-keep-dnsmasq"
-$ nubeio-vpnc uninstall
-```
+  ```bash
+  # pass "-f" to remove completely vpnclient installation and data folder
+  # it still keep "dnsmasq" to resolve DNS for public domain. if want to restore computer network to origin state, pass "--no-keep-dnsmasq"
+  $ nubeio-vpnc uninstall
+  ```
 
 #### IoT device
 
