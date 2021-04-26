@@ -202,7 +202,7 @@ INFO : Hash version: 2465e648
   $ sudo nubeio-vpnc add -sh <vpn_server> -su <customer_code_n> -ct password -cu <vpn_user> -cp <vpn_password> -cd
 
   # Then you can switch among account by
-  $ sudo nubeio-vpnc connect customer_code_n
+  $ sudo nubeio-vpnc connect <customer_code_n>
 
   # To uninstall vpn service
   $ sudo nubeio-vpnc uninstall
